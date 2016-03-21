@@ -1,0 +1,19 @@
+{
+  "learningRate": "0.001",
+  "numberOfIterations": "5000",
+  "weights": [
+    {
+      "value": "100",
+      "isZeroWeight": "true"
+    },
+    {
+      "value": "200"
+    },
+    {
+      "value": "10"
+    },
+    {
+      "value": "5"
+    }
+  ]
+}

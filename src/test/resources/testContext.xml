@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="gradientDescent" class="com.ls.ai.ml.BatchGradientDescent">
+        <property name="properties">
+            <props>
+                <prop key="init.numberOfParameters">3</prop>
+                <prop key="init.learningRate">0.001</prop>
+                <prop key="init.numIterations">10</prop>
+                <prop key="init.targetIndex">5</prop>
+                <prop key="init.numTrainingExamples">500</prop>
+            </props>
+        </property>
+        <property name="dataStream" ref="csvDataStream" />
+    </bean>
+
+    <bean id="csvDataStream" class="com.ls.ai.ml.CSVDataStream">
+        <property name="file" value="classpath:testDataset.csv" />
+        <property name="headerMapping">
+            <list>
+                <value>NO_BEDROOMS</value>
+                <value>NO_BATHROOMS</value>
+                <value>NO_CAR_SPACES</value>
+                <value>property_type</value>
+                <value>SALE_DATE</value>
+                <value>sale_price</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

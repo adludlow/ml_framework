@@ -1,0 +1,9 @@
+{
+    "featureIndexList": [
+      "0",
+      "1",
+      "2"
+    ],
+    "numberOfTrainingExamples": "570",
+    "targetIndex": "5"
+}

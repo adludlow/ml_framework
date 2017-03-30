@@ -2,8 +2,9 @@
     "featureIndexList": [
       "0",
       "1",
-      "2"
+      "2",
+      "4"
     ],
-    "numberOfTrainingExamples": "570",
+    "numberOfTrainingExamples": "5",
     "targetIndex": "5"
 }

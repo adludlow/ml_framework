@@ -3,7 +3,6 @@ package com.ls.ai.ml;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by aludlow on 28/10/2015.
@@ -93,54 +92,6 @@ public class BatchGradientDescent implements LearningAlgorithm{
                 dataStream.reset();
             }
         }
-        /*int numberOfParameters = dataStream.getNumberOfFeatures();
-        int numTrainingExamples = dataStream.getNumberOfTrainingExamples();
-        int targetIndex = dataStream.getTargetIndex();
-        for(int c=0; c < numberOfIterations; c++){
-            int indexOffset = 0;
-            for(int j=0; j < weights.size(); j++) {
-                Weight currentWeight = weights.get(j);
-                Double cost= 0.0;
-                if(currentWeight.isZeroWeight()){
-                    indexOffset += 1;
-                }
-                for(int i=0; i < numTrainingExamples; i++) {
-                    List<byte[]> record = dataStream.getNextRecord();
-                    Double currentTarget = Double.parseDouble(new String(record.get(targetIndex)));
-                    Double costMultiplier;
-                    if(currentWeight.isZeroWeight()){
-                        costMultiplier = 1.0;
-                    }
-                    else
-                        costMultiplier = Double.parseDouble(new String(record.get(j+indexOffset)));
-
-                    if(costMultiplier == 0.0)
-                        costMultiplier = 1.0;
-
-                    Double hypothesis = 0.0;
-                    int localIndexOffset = 0;
-                    for(int p = 0; p < numberOfParameters; p++){
-                        Double weightedParam;
-                        Weight w = weights.get(p);
-                        if(w.isZeroWeight()){
-                            localIndexOffset+=1;
-                            weightedParam = w.getValue();
-                        }
-                        else{
-                            Double paramValue = Double.parseDouble(new String(record.get(p-localIndexOffset)));
-                            weightedParam = w.getValue()*paramValue;
-                        }
-                       hypothesis += weightedParam;
-                    }
-                    Double localCost = (currentTarget - hypothesis);//*costMultiplier;
-                    cost += localCost;
-                }
-                System.out.println(cost);
-                Double newVal = weights.get(j).getValue() + (learningRate * cost);
-                weights.get(j).setValue(newVal);
-                dataStream.reset();
-            }
-        }*/
         printWeights();
     }
 

@@ -18,7 +18,7 @@
     </bean>
 
     <bean id="csvDataStream" class="com.ls.ai.ml.CSVDataStream">
-        <property name="file" value="classpath:testDataset.csv" />
+        <property name="file" value="classpath:testDataset-Small.csv" />
         <property name="headerMapping">
             <list>
                 <value>NO_BEDROOMS</value>

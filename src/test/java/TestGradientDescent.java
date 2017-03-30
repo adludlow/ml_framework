@@ -17,7 +17,7 @@ public class TestGradientDescent {
         String dataStreamConfigString = helper.getFile("testDatasetProperties.json");
         CSVDataStream dataStream = (CSVDataStream) DataStreamFactory.getDataStream(DataStreamFactory.DataStreamType.CSVDataStream,
                 dataStreamConfigString);
-        dataStream.setCSVString(helper.getFile("testDataset.csv"));
+        dataStream.setCSVString(helper.getFile("testDataset-Small.csv"));
 
         String configString = helper.getFile("GradientDescentAlgorithmProperties.json");
         LearningAlgorithm gd = LearningAlgorithmFactory.getLearningAlgorithm(LearningAlgorithmFactory.AlgorithmType.GRADIENT_DESCENT,
